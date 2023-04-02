@@ -1,32 +1,64 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+public class CollectionSorter
+{
+    public int[] SortIntArray(int[] collection, bool ascending = true)
+    {
+        if (ascending)
+        {
+            Array.Sort(collection);
+        }
+        else
+        {
+            Array.Sort(collection);
+            Array.Reverse(collection);
+        }
+        
+        return collection;
+    }
+    
+    public double[] SortDoubleArray(double[] collection, bool ascending = true)
+    {
+        if (ascending)
+        {
+            Array.Sort(collection);
+        }
+        else
+        {
+            Array.Sort(collection);
+            Array.Reverse(collection);
+        }
+        
+        return collection;
+    }
+    
+    public char[] SortCharArray(char[] collection, bool ascending = true)
+    {
+        if (ascending)
+        {
+            Array.Sort(collection);
+        }
+        else
+        {
+            Array.Sort(collection);
+            Array.Reverse(collection);
+        }
+        
+        return collection;
+    }
+    
+    public string SortString(string collection, bool ascending = true)
+    {
+        char[] charArray = collection.ToCharArray();
+        
+        if (ascending)
+        {
+            Array.Sort(charArray);
+        }
+        else
+        {
+            Array.Sort(charArray);
+            Array.Reverse(charArray);
+        }
+        
+        return new string(charArray);
+    }
+}
